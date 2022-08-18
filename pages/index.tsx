@@ -20,6 +20,7 @@ const Home: NextPage = () => {
     dispatch(reduxSetCategories(res2));
     setCategories(res2);
   };
+
   useEffect(() => {
     fetchCategories();
   }, []);

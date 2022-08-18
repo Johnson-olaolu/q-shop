@@ -3,12 +3,14 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import user from "./userStore";
 import category from "./categoryStore";
+import cart from "./cartStore";
 import thunk from "redux-thunk";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
 const reducers = combineReducers({
   user,
   category,
+  cart,
 });
 const storage = createWebStorage("local");
 
