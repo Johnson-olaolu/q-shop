@@ -6,8 +6,8 @@ interface ICartStore {
 }
 
 // Slice
-const categorySlice = createSlice({
-  name: "category",
+const cartSlice = createSlice({
+  name: "cart",
   initialState: {
     cartItems: [],
   } as ICartStore,
@@ -39,6 +39,6 @@ const categorySlice = createSlice({
   },
 });
 
-export const { setCartItems, addCartItem, removeCartItem, clearCartItems, updateCartItem } = categorySlice.actions;
+export const { setCartItems, addCartItem, removeCartItem, clearCartItems, updateCartItem } = cartSlice.actions;
 
-export default categorySlice.reducer;
+export default cartSlice.reducer;
