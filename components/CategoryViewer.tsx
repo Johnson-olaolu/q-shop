@@ -49,7 +49,7 @@ const CategoryViewer: NextPage<ICategoryViewer> = (props) => {
               ) : (
                 <div className="min-w-screen-xl grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8 xl:px-0">
                   {categoryProducts.map((product, index) => (
-                    <>{index < 5 && <ProductCard product={product} />}</>
+                    <>{index < 4 && <ProductCard product={product} />}</>
                   ))}
                 </div>
               )}
