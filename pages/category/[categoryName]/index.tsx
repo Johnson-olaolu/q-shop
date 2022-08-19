@@ -42,8 +42,8 @@ const SingleCategory = () => {
           <div className="py-16  xl:max-w-7xl xl:mx-auto xl:px-8">
             <div className="mt-4 flow-root">
               <div className="-my-2">
-                <div className="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
-                  <div className="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-4 xl:gap-8">
+                <div className="box-content py-2 relative overflow-x-auto xl:overflow-visible">
+                  <div className="min-w-screen-xl grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8 xl:px-0">
                     {categoryProducts.map((product, index) => (
                       <div key={product.id}>
                         <ProductCard product={product} />

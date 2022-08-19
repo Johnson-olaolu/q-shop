@@ -37,7 +37,7 @@ const SingleCartItem: NextPage<ISingleCartItem> = (props) => {
         <img
           src={cartItem.product.images[0]}
           alt={cartItem.product.title}
-          className="w-24 h-24 rounded-sm  object-center object-cover sm:w-48 sm:h-48"
+          className="w-24 h-32 object-contain rounded-sm object-cover sm:w-48 sm:h-48"
         />
       </div>
 

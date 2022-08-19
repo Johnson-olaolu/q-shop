@@ -84,7 +84,7 @@ const SingleProductPage = () => {
       {loading ? (
         <PageLoader />
       ) : (
-        <div className="py-8  xl:max-w-7xl xl:mx-auto xl:px-8">
+        <div className="lg:py-16 py-8 xl:max-w-7xl xl:mx-auto xl:px-8 px-8 ">
           <div className=" grid lg:grid-cols-2 gap-14 ">
             <div className="relative w-full  rounded-sm">
               <img src={productDetails?.images[0]} alt="" className="w-full h-full object-center object-cover" />

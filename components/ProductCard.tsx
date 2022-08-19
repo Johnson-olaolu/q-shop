@@ -21,7 +21,12 @@ const ProductCard: NextPage<IProductCard> = (props) => {
       </Link>
 
       <div className="space-y-2 text-center">
-        <p className="text-center text-xl font-medium text-gray-700">{product.title}</p>
+        <Link href={`/product/${product.id}`}>
+          <a>
+            <p className="text-center text-xl font-medium text-gray-700 hover:opacity-50">{product.title}</p>
+          </a>
+        </Link>
+
         <p className="text-center text-xl  text-gray-400 font-extralight"> ${product.price}</p>
       </div>
     </div>

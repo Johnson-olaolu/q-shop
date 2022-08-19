@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import SingleCartItem from "../../components/cart/SingleCartItem";
@@ -6,6 +7,7 @@ import { clearCartItems, removeCartItem } from "../../store/cartStore";
 
 export default function ShoppingCart() {
   const dispatch = useDispatch();
+  const router = useRouter();
   const { cartItems } = useSelector((state: RootState) => state.cart);
 
   const checkout = () => {
@@ -17,6 +19,7 @@ export default function ShoppingCart() {
       closeOnClick: true,
       type: "success",
     });
+    router.push("/");
   };
   return (
     <div className="bg-white">
@@ -50,8 +53,9 @@ export default function ShoppingCart() {
 
             <div className="mt-6">
               <button
-                type="submit"
                 disabled={cartItems.length === 0}
+                type="button"
+                onClick={checkout}
                 className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500 disabled:opacity-50"
               >
                 Checkout
